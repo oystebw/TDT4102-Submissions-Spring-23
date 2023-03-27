@@ -1,0 +1,443 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Mon May 23 08:27:55 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 14)
+TDT4102_INCLUDE := /Users/oysteinweibell/Library/tdt4102/TDT4102
+# makefile (from `Makefile', line 9)
+FLTK_DIR := /Users/oysteinweibell/Library/tdt4102/FLTK
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from `Makefile', line 19)
+RELEASE_OUT := Release
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/oysteinweibell/Desktop/Oving10
+# makefile (from `Makefile', line 26)
+LINK = $(CXX)
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"nb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 7)
+GRAPH_LIB_LIB := /Users/oysteinweibell/Library/tdt4102/Graph_lib/lib
+# makefile (from `Makefile', line 33)
+SOURCES := MinesweeperWindow.cpp Tile.cpp main.cpp
+# makefile (from `Makefile', line 41)
+CXXFLAGS = -std=c++17 -Wall -Wno-overloaded-virtual -I$(GRAPH_LIB_INCLUDE) -I$(TDT4102_INCLUDE) --target=x86_64-apple-darwin-macho -I$(FLTK_INCLUDE) -I$(FLTK_INCLUDE)/FL/images -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_THREAD_SAFE -D_REENTRANT  -O3 -DNDEBUG
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 10)
+FLTK_INCLUDE := /Users/oysteinweibell/Library/tdt4102/FLTK/include
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/vg/8zbmtv3n7rl4w_8nbg0511ym0000gn/T/vscode-ipc-9f303538-5dc8-4d47-93b2-cfdc1e2d16f3.sock
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /Users/oysteinweibell/mambaforge/bin:/Users/oysteinweibell/mambaforge/condabin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+# makefile (from `Makefile', line 51)
+GRAPH_LIB_BUILDDIR = $(OUT)/Graph_lib
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 31)
+LDFLAGS = -L$(GRAPH_LIB_LIB) -l$(GRAPH_LIB) --target=x86_64-apple-darwin-macho -L$(FLTK_LIB) -lfltk_images -lfltk_jpeg -lfltk_png -lz -lfltk -lm -lpthread -framework Cocoa
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1dZS7jxQy2/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+CONDA_EXE = /Users/oysteinweibell/mambaforge/bin/conda
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/oysteinweibell/Desktop/Oving10
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/oysteinweibell
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/oysteinweibell/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = oysteinweibell
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from `Makefile', line 11)
+FLTK_LIB := /Users/oysteinweibell/Library/tdt4102/FLTK/lib
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from `Makefile', line 48)
+TDT4102_BUILDDIR = $(OUT)/TDT4102
+# environment
+SHLVL = 1
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = oysteinweibell
+# makefile
+.DEFAULT_GOAL := Release
+# makefile (from `Makefile', line 5)
+GRAPH_LIB_DIR := /Users/oysteinweibell/Library/tdt4102/Graph_lib
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/vg/8zbmtv3n7rl4w_8nbg0511ym0000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/oysteinweibell/Library/Application Support/Code/1.67.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from `Makefile', line 52)
+GRAPH_LIB_OBJECTS = $(GRAPH_LIB_BUILDDIR)/Graph.o $(GRAPH_LIB_BUILDDIR)/GUI.o $(GRAPH_LIB_BUILDDIR)/Window.o
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.47061509.47061515
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from `Makefile', line 6)
+GRAPH_LIB_INCLUDE := /Users/oysteinweibell/Library/tdt4102/Graph_lib/include
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0xC
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from `Makefile', line 2)
+EXECUTABLE := program
+# makefile (from `Makefile', line 23)
+CXX = clang++
+# makefile (from `Makefile', line 43)
+GRAPH_LIB := Graph_lib
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /Users/oysteinweibell/mambaforge/bin/python
+# makefile (from `Makefile', line 13)
+TDT4102_DIR := /Users/oysteinweibell/Library/tdt4102/TDT4102
+# makefile (from `Makefile', line 42)
+OUT := Release
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# makefile (from `Makefile', line 34)
+TDT4102_SOURCES := /Users/oysteinweibell/Library/tdt4102/TDT4102/AnimationWindow.cpp /Users/oysteinweibell/Library/tdt4102/TDT4102/InputHandler.cpp /Users/oysteinweibell/Library/tdt4102/TDT4102/MoveableImage.cpp /Users/oysteinweibell/Library/tdt4102/TDT4102/ShapeDrawQueue.cpp
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# makefile (from `Makefile', line 54)
+OBJECTS := Release/sources/MinesweeperWindow.o Release/sources/Tile.o Release/sources/main.o Release/Graph_lib/Graph.o Release/Graph_lib/GUI.o Release/Graph_lib/Window.o Release/TDT4102/AnimationWindow.o Release/TDT4102/InputHandler.o Release/TDT4102/MoveableImage.o Release/TDT4102/ShapeDrawQueue.o
+# makefile (from `Makefile', line 46)
+SOURCES_OUT = $(OUT)/sources
+# makefile (from `Makefile', line 18)
+DEBUG_OUT := Debug
+# environment
+CONDA_PREFIX = /Users/oysteinweibell/mambaforge
+# makefile (from `Makefile', line 49)
+TDT4102_OBJECTS = $(TDT4102_BUILDDIR)/AnimationWindow.o $(TDT4102_BUILDDIR)/InputHandler.o $(TDT4102_BUILDDIR)/MoveableImage.o $(TDT4102_BUILDDIR)/ShapeDrawQueue.o
+# environment
+VSCODE_PID = 862
+# environment
+_CE_CONDA = 
+# environment
+LANG = C
+# variable set hash-table stats:
+# Load=95/1024=9%, Rehash=0, Collisions=2/176=1%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /Users/oysteinweibell/Library/tdt4102/TDT4102 (device 16777233, inode 45683752): 13 files, no impossibilities.
+# . (device 16777233, inode 42206368): 12 files, no impossibilities.
+
+# 25 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+Release/sources/%.o: %.cpp
+#  commands to execute (from `Makefile', line 89):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $< -o $(subst //,/,$@)
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+Release/TDT4102/AnimationWindow.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 61):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(TDT4102_DIR)/AnimationWindow.cpp -o $@
+	
+
+Release/Graph_lib/GUI.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 81):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(GRAPH_LIB_DIR)/src/GUI.cpp -o $@
+	
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+ 
+.PHONY: runrelease rundebug clean cleandebug cleanrelease debug release
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-17 17:49:01
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+debug:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 114):
+	DEBUG=1 $(MAKE) $(DEBUG_OUT)/$(EXECUTABLE)
+	
+
+# Not a target:
+Release/sources/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Release/Graph_lib/Window.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 85):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(GRAPH_LIB_DIR)/src/Window.cpp -o $@
+	
+
+Release/program: Release Release/sources/MinesweeperWindow.o Release/sources/Tile.o Release/sources/main.o Release/Graph_lib/Graph.o Release/Graph_lib/GUI.o Release/Graph_lib/Window.o Release/TDT4102/AnimationWindow.o Release/TDT4102/InputHandler.o Release/TDT4102/MoveableImage.o Release/TDT4102/ShapeDrawQueue.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 93):
+	$(LINK) -g $(OBJECTS) -o $@ $(LDFLAGS)
+	
+
+runrelease: release
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 98):
+	./$(RELEASE_OUT)/$(EXECUTABLE)
+	
+
+Release:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 57):
+	mkdir -p $@
+	
+
+cleanrelease:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 108):
+	$(RM) $(DEBUG_OUT)/$(EXECUTABLE)
+	$(RM) -r $(SOURCES_OUT)
+	
+
+rundebug: debug
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 100):
+	./$(DEBUG_OUT)/$(EXECUTABLE)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cleandebug:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 105):
+	$(RM) $(DEBUG_OUT)/$(EXECUTABLE)
+	$(RM) -r $(SOURCES_OUT)
+	
+
+clean: cleanrelease cleandebug
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Release/TDT4102/ShapeDrawQueue.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 73):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(TDT4102_DIR)/ShapeDrawQueue.cpp -o $@
+	
+
+release:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 116):
+	$(MAKE) $(RELEASE_OUT)/$(EXECUTABLE)
+	
+
+# Not a target:
+Release/sources/Tile.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Release/TDT4102/InputHandler.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 65):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(TDT4102_DIR)/InputHandler.cpp -o $@
+	
+
+Release/Graph_lib/Graph.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 77):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(GRAPH_LIB_DIR)/src/Graph.cpp -o $@
+	
+
+# Not a target:
+Release/sources/MinesweeperWindow.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Release/TDT4102/MoveableImage.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 69):
+	mkdir -p ./$(dir $(subst //,/,$@))
+	$(CXX) $(CXXFLAGS) -c $(TDT4102_DIR)/MoveableImage.cpp -o $@
+	
+
+# files hash-table stats:
+# Load=24/1024=2%, Rehash=0, Collisions=3/60=5%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Mon May 23 08:27:55 2022
+
+ 

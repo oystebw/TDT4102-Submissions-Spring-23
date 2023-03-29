@@ -8,6 +8,16 @@ std::ostream& operator<<(std::ostream& os, const Node& node){
 }
 
 Node* LinkedList::insert(Node* pos, const std::string& value){
+    if(pos == head.get()){
+        head = std::make_unique<Node>(value, std::move(head->next), nullptr);
+        head->next->prev = head.get();
+        return pos;
+    }
+    if(pos == tail){
+        pos->getPrev()->next = std::make_unique<Node>(value, std::make_unique<Node>(tail), pos->getPrev());
+        return pos;
+    }
+
     Node* prev = pos->getPrev();
     prev->next = std::make_unique<Node>(value, std::move(prev->next), prev);
     pos->prev = prev->getNext();
@@ -61,4 +71,8 @@ std::ostream& operator<<(std::ostream& os, const LinkedList& list){
     return os;
 }
 
+}
+
+void testLinkedList(){
+    LinkedList::LinkedList ll;
 }

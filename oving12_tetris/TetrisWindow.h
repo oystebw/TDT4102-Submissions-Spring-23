@@ -6,6 +6,8 @@
 #include <vector>
 #include "Tetromino.h"
 
+static int g_Color = 0;
+
 class TetrisWindow : public TDT4102::AnimationWindow {
 
 public:
@@ -30,6 +32,7 @@ private:
     bool shouldStop();
     void fastenTetronimo();
     void drawGridMatrix();
+    void drawLines();
 
     bool checkLeft();
     bool checkRight();
@@ -38,4 +41,6 @@ private:
     void removeFullRow(int row);
 
     bool checkLost();
+
+    TDT4102::Color getDisco();
 };

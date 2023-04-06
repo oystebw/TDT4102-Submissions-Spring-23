@@ -24,7 +24,8 @@ void TetrisWindow::run() {
 
     while(!should_close()) { 
         framesSinceLastTetronimoMove++;
-        if(framesSinceLastTetronimoMove >= framesPerTetronimoMove * 2) {
+        if(framesSinceLastTetronimoMove >= framesPerTetronimoMove) {
+            g_Color++;
             framesSinceLastTetronimoMove = 0;
             if(shouldStop()){
                 fastenTetronimo();
@@ -41,8 +42,9 @@ void TetrisWindow::run() {
         }
         handleInput();
         checkFullRows();
-        drawCurrentTetromino();
         drawGridMatrix();
+        drawCurrentTetromino();
+        drawLines();
         
         next_frame();
     }
@@ -164,6 +166,9 @@ void TetrisWindow::drawGridMatrix(){
                 draw_rectangle({col * blockSize, row * blockSize}, blockSize, blockSize,
                 tetrominoToColor(gridMatrix[row][col]), TDT4102::Color::black);
             }
+            else{
+                draw_rectangle({col * blockSize, row * blockSize}, blockSize, blockSize, getDisco());
+            }
         }
     }
 }
@@ -234,4 +239,50 @@ bool TetrisWindow::checkLost(){
         }
     }
     return false;
+}
+
+void TetrisWindow::drawLines(){
+    TDT4102::Point topLeft = currentTetromino.getPosition();
+    int size = currentTetromino.getMatrixSize();
+
+    for(int col{0}; col < size; ++col){
+        for(int row{0}; row < size; ++row){
+            if(currentTetromino.blockExist(row, col)){
+                draw_line({(topLeft.x + col) * blockSize, (topLeft.y + row + 1) * blockSize}, {(topLeft.x + col) * blockSize, height * blockSize});
+                goto next;
+            }
+        }
+    }
+    next:;
+    for(int col{size - 1}; col > -1; col--){
+        for(int row{0}; row < size; ++row){
+            if(currentTetromino.blockExist(row, col)){
+                draw_line({(topLeft.x + col + 1) * blockSize, (topLeft.y + row + 1) * blockSize}, {(topLeft.x + col + 1) * blockSize, height * blockSize});
+                return;
+            }
+        }
+    }
+}
+
+TDT4102::Color TetrisWindow::getDisco(){
+    switch (g_Color % 7)
+    {
+        case 0:
+        return TDT4102::Color::fuchsia;
+        case 1:
+        return TDT4102::Color::spring_green;
+        case 2:
+        return TDT4102::Color::slate_blue;
+        case 3:
+        return TDT4102::Color::peachpuff;
+        case 4:
+        return TDT4102::Color::olivedrab;
+        case 5:
+        return TDT4102::Color::light_salmon;
+        case 6:
+        return TDT4102::Color::lawn_green;
+
+        default:
+        return TDT4102::Color::black;
+    }
 }

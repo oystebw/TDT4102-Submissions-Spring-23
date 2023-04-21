@@ -69,7 +69,7 @@ void TDT4102::AnimationWindow::destroy() {
         SDL_DestroyWindow(windowHandle);
         windowHandle = nullptr;
     }
-    if(context != nullptr) {
+    if (context != nullptr) {
         nk_free(context);
         context = nullptr;
     }
@@ -91,15 +91,15 @@ void TDT4102::AnimationWindow::show_frame() {
             KeyboardKey releasedKey = TDT4102::internal::convertSDLKeyToKeyboardKey(event.key.keysym);
             currentKeyStates[releasedKey] = false;
         } else if (event.type == SDL_MOUSEBUTTONDOWN) {
-            if(event.button.button == SDL_BUTTON_LEFT) {
+            if (event.button.button == SDL_BUTTON_LEFT) {
                 currentLeftMouseButtonState = true;
-            } else if(event.button.button == SDL_BUTTON_RIGHT) {
+            } else if (event.button.button == SDL_BUTTON_RIGHT) {
                 currentRightMouseButtonState = true;
             }
         } else if (event.type == SDL_MOUSEBUTTONUP) {
-            if(event.button.button == SDL_BUTTON_LEFT) {
+            if (event.button.button == SDL_BUTTON_LEFT) {
                 currentLeftMouseButtonState = false;
-            } else if(event.button.button == SDL_BUTTON_RIGHT) {
+            } else if (event.button.button == SDL_BUTTON_RIGHT) {
                 currentRightMouseButtonState = false;
             }
         }
@@ -113,7 +113,7 @@ void TDT4102::AnimationWindow::update_gui() {
     for (Widget& widget : widgets) {
         startNuklearDraw(widget.position, widget.uniqueWidgetName, widget.width, widget.height);
         fontCache.setFont(context, Font::arial, 18);
-        if(widget.isVisible) {
+        if (widget.isVisible) {
             widget.update(context);
         }
         endNuklearDraw();
@@ -146,7 +146,7 @@ void TDT4102::AnimationWindow::close() {
 
 void TDT4102::AnimationWindow::wait_for_close() {
     // This forces text to render, and ensures it appears on the screenshot that will be shown perpetually
-    //update_gui();
+    // update_gui();
     nk_sdl_render(NK_ANTI_ALIASING_ON);
 
     // take a screenshot such that the window contents can be redrawn
@@ -230,8 +230,8 @@ void TDT4102::AnimationWindow::draw_rectangle(TDT4102::Point topLeftPoint, int w
     SDL_Rect fillRect = {topLeftPoint.x, topLeftPoint.y, width, height};
     SDL_SetRenderDrawColor(rendererHandle, color.redChannel, color.greenChannel, color.blueChannel, color.alphaChannel);
     SDL_RenderFillRect(rendererHandle, &fillRect);
-    if (borderColor != Color::transparent){
-        SDL_SetRenderDrawColor(rendererHandle, borderColor.redChannel,borderColor.greenChannel, borderColor.blueChannel, borderColor.alphaChannel);
+    if (borderColor != Color::transparent) {
+        SDL_SetRenderDrawColor(rendererHandle, borderColor.redChannel, borderColor.greenChannel, borderColor.blueChannel, borderColor.alphaChannel);
         SDL_RenderDrawRect(rendererHandle, &fillRect);
     }
 }
@@ -318,6 +318,14 @@ TDT4102::Point TDT4102::AnimationWindow::get_mouse_coordinates() {
 void TDT4102::AnimationWindow::add(TDT4102::Widget& widgetToAdd) {
     // Make sure not to create a copy
     widgets.emplace_back(widgetToAdd);
+}
+
+void TDT4102::AnimationWindow::show_info_dialog(const std::string& message) const {
+    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "Information", message.c_str(), windowHandle);
+}
+
+void TDT4102::AnimationWindow::show_error_dialog(const std::string& message) const {
+    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", message.c_str(), windowHandle);
 }
 
 TDT4102::Point TDT4102::AnimationWindow::getWindowDimensions() {

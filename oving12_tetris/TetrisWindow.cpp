@@ -15,6 +15,7 @@ TetrisWindow::TetrisWindow(TDT4102::Point topLeft, TDT4102::Point spawnPoint, in
         }
         
         generateRandomTetromino();
+        backgroundColor = TDT4102::Color::fuchsia;
         run();
     }
 
@@ -25,9 +26,9 @@ void TetrisWindow::run() {
     while(!should_close()) { 
         framesSinceLastTetronimoMove++;
         if(framesSinceLastTetronimoMove >= framesPerTetronimoMove) {
-            g_Color++;
             framesSinceLastTetronimoMove = 0;
             if(shouldStop()){
+                backgroundColor = getDisco();
                 fastenTetronimo();
                 if(checkLost()){
                     close();
@@ -167,7 +168,7 @@ void TetrisWindow::drawGridMatrix(){
                 tetrominoToColor(gridMatrix[row][col]), TDT4102::Color::black);
             }
             else{
-                draw_rectangle({col * blockSize, row * blockSize}, blockSize, blockSize, getDisco());
+                draw_rectangle({col * blockSize, row * blockSize}, blockSize, blockSize, backgroundColor);
             }
         }
     }
@@ -265,7 +266,7 @@ void TetrisWindow::drawLines(){
 }
 
 TDT4102::Color TetrisWindow::getDisco(){
-    switch (g_Color % 7)
+    switch (g_Color++ % 7)
     {
         case 0:
         return TDT4102::Color::fuchsia;

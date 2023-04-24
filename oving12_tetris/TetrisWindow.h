@@ -6,7 +6,7 @@
 #include <vector>
 #include "Tetromino.h"
 
-static int g_Color = 0;
+static volatile int g_Color = 1;
 
 class TetrisWindow : public TDT4102::AnimationWindow {
 
@@ -24,6 +24,8 @@ private:
     Tetromino currentTetromino;
     std::vector<std::vector<TetrominoType>> gridMatrix;
     const TDT4102::Point spawnPoint;
+
+    TDT4102::Color backgroundColor;
 
     void handleInput();
     void generateRandomTetromino();

@@ -57,8 +57,8 @@ void Game::place_new_2()
 	bool success = false;
 
 	while(!success){
-		x = rand() % 4;
-		y = rand() % 4;
+		x = rand() % board_size;
+		y = rand() % board_size;
 
 		if(!at(x, y)){
 			at(x, y) = 2;
